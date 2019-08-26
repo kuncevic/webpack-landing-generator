@@ -6,7 +6,7 @@ Easy way to create landing page that converts.
 
 ```
 npm install -g nodemon
-npm install or yarn install
+npm install
 
 ```
 

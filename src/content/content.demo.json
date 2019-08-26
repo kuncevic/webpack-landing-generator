@@ -1,0 +1,143 @@
+{
+  "settings": {
+    "name": "webpack-landing-generator",
+    "version": "1.0.0",
+    "lang": "en",
+    "title": "Webpack Landing Generator",
+    "description": "Easy way to create landing page that converts.",
+    "email": "",
+    "ga": "",
+    "copyrights": "",
+    "favicon": "public/favicon.png"
+  },
+  "quotes": [
+    {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. - <b>Lorem ipsum</b>"
+    }
+  ],
+  "info": {
+    "title": "Lorem ipsum dolor sit amet",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  "buttons": {
+    "main": {
+      "text": "About",
+      "header": "",
+      "action": ".firstCTA-section"
+    },
+    "cta": {
+      "text": "Fork On Github",
+      "action": "https://github.com/kuncevic/webpack-landing-generator"
+    }
+  },
+  "sections": [
+    {
+      "name": "hero",
+      "menu": "Home",
+      "title": "Webpack Landing Generator",
+      "description": {
+        "text": "Easy way to create your landing page that converts 🚀",
+        "align": "txtcenter"
+      }
+    },
+    {
+      "name": "pain",
+      "menu": "Building a new landing?",
+      "title": "Want to create a new landing page?",
+      "description": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "align": "txtcenter txtjustify"
+      }
+    },
+    {
+      "name": "dream",
+      "menu": "Create it in a minutes!",
+      "title": "Imagine being able to create landing page in a minutes!",
+      "description": {
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "align": "txtcenter txtjustify"
+      }
+    },
+    {
+      "name": "fix",
+      "menu": "Use Webpack Landing Generator!",
+      "title": "Use Webpack Landing Generator!",
+      "description": {
+        "text": "",
+        "align": "txtcenter"
+      },
+      "subsections": [
+        {
+          "title": "How it works?",
+          "description": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "align": "txtcenter txtjustify"
+          }
+        },
+        {
+          "title": "Who it is for?",
+          "description": {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "align": "txtcenter txtjustify"
+          }
+        }
+      ]
+    },
+    {
+      "name": "firstCTA",
+      "menu": "About",
+      "title": "Created with ❤️ by Aliaksei Kuncevič",
+      "description": {
+        "text": "👋 <a target='_blank' href='https://github.com/kuncevic'>Github</a> <br /> <a target='_blank' href='https://www.twitter.com/kuncevic'>Twitter</a> <br /> <a target='_blank' href='https://www.linkedin.com/kuncevic/'>Linkedin</a>",
+        "align": "txtcenter"
+      },
+      "button": "cta"
+    },
+    {
+      "name": "proof",
+      "menu": "",
+      "title": "",
+      "description": {
+        "text": "",
+        "align": ""
+      }
+    },
+    {
+      "name": "objections",
+      "menu": "",
+      "title": "",
+      "description": {
+        "text": "",
+        "align": ""
+      }
+    },
+    {
+      "name": "uniqueness",
+      "menu": "",
+      "title": "",
+      "description": {
+        "text": "",
+        "align": ""
+      }
+    },
+    {
+      "name": "secondCTA",
+      "menu": "",
+      "title": "",
+      "description": {
+        "text": "",
+        "align": ""
+      }
+    },
+    {
+      "name": "urgency",
+      "menu": "",
+      "title": "",
+      "description": {
+        "text": "",
+        "align": ""
+      }
+    }
+  ]
+}

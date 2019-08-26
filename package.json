@@ -1,0 +1,59 @@
+{
+  "name": "webpack-landing-generator",
+  "version": "1.0.0",
+  "description": "Easy way to create landing page that converts.",
+  "scripts": {
+    "start": "npm run start:dev -- content.demo",
+    "build": "npm run build:prod -- content.demo",
+    "start:dev": "func() { CONTENT=$1 nodemon --watch content/ --exec 'webpack-dev-server --config webpack/webpack.config.dev.js'; }; func",
+    "build:prod": "func() { CONTENT=$1 NODE_ENV=production webpack --config webpack/webpack.config.prod.js  --colors; }; func"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuncevic/webpack-landing-generator.git"
+  },
+  "keywords": [
+    "webpack",
+    "landing",
+    "frontend",
+    "es6",
+    "javascript",
+    "webdev"
+  ],
+  "author": "kuncevic.dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuncevic/webpack-landing-generator/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.4",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.2.1",
+    "eslint-loader": "^2.2.1",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^4.0.0-beta.5",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "core-js": "^3.2.1",
+    "expose-loader": "^0.7.5",
+    "jquery": "^3.4.1",
+    "jquery-sticky": "^1.0.4",
+    "jquery.scrollto": "^2.1.2",
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  }
+}

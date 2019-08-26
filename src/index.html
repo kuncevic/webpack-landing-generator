@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="<%= settings.lang%>">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= settings.title %></title>
+  <meta name="description" content="<%= settings.description %>" />
+  <link rel="icon" href="<%= settings.favicon %>" />
+  <link href="public/fonts/font.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <% let allSections = [...Object.entries(sections)] %>
+  <% let mainButton = buttons['main']%>
+
+  <!-- HEADER SECTION -->
+  <header class="site-header"></header>
+  <div class="page-content">
+    <div class="page-content-container">
+      <div class="home">
+        <!-- MENU SECTION -->
+        <section class="menu-section">
+          <div class="menu-section-container">
+            <div class="menu-section-container-hamburger">
+              <div class="menu-section-hamburger">
+                <div id="nav-toggle" href="#"><span></span></div>
+              </div>
+            </div>
+            <nav class="menu-section-container-nav bigger h2-like">
+
+              <% allSections.forEach(([key, menu]) => { %>
+
+              <div class="nav-item menu-nav-item" data-target="<%= menu.name %>-section">
+                <strong><%= menu.menu %></strong>
+              </div>
+              <% }); %>
+            </nav>
+          </div>
+        </section>
+
+        <% allSections.forEach(([key, section], index) => { %>
+        <% if (section.menu != '') { %>
+        <!-- <%= section.name.toUpperCase() %> SECTION -->
+        <% switch (section.name) { case 'hero' : %>
+
+        <section class="hero-section ">
+          <div class="wrapper w960p flex-container flex-container-v">
+            <h1 class="xlbiggest flex-item-center txtcenter"><%= section.title %></h1>
+            <p class="biggest flex-item-center h2-like txtcenter">
+              <%= section.description.text %>
+            </p>
+            <p class="biggest flex-item-center h2-like <%= section.description.align %>"></p>
+            <div class="flex-item-center">
+              <div class="mtxl w150p"></div>
+              <div class="txtcenter">
+                <button class="button txtcenter main-cta"
+                  onclick="$.scrollTo($('<%= mainButton.action %>').offset().top-$('.menu-section').height(), {duration:500})">
+                  <%= mainButton.text %>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="scroll-down">
+            <section class="section07">
+              <a href="#"
+                onclick="$.scrollTo($('.pain-section').offset().top-$('.menu-section').height(), {duration:500})"><span></span><span></span><span></span></a>
+            </section>
+          </div>
+        </section>
+
+        <% break; case 'pain' : %>
+        <% case 'dream' : %>
+        <% case 'firstCTA' : %>
+        <% case 'proof' : %>
+        <% case 'objections' : %>
+        <% case 'uniqueness' : %>
+        <% case 'secondCTA' : %>
+        <% case 'urgency' : %>
+
+        <section class="<%= section.name%>-section mtxlp ">
+          <div class="wrapper w960p flex-container flex-container-v">
+            <div class="separator w10 is-hidden"></div>
+            <h1 class="xbiggest flex-item-center txtcenter mtxl mbs"><%= section.title %></h1>
+            <p class="flex-item-center h3-like mts <%= section.description.align %>">
+              <%= section.description.text %>
+            </p>
+          </div>
+
+          <% if (section.button){ %>
+          <% let button = buttons[section.button]%>
+          <% if (section.name === 'firstCTA'){ %>
+
+          <div class="wrapper w960p flex-container flex-container-v">
+            <div class="flex-item-center">
+              <a href="<%= button.action %>" target="_blank"><button class="button-primary txtcenter main-cta_">
+                  <%= button.text %>
+                </button></a>
+            </div>
+            <div class="mtsm w150p"></div>
+
+            <%if (quotes) {%>
+
+            <blockquote>
+              <h4 class="w700p">
+                <%= quotes[0].text %>
+              </h4>
+            </blockquote>
+
+            <%}%>
+
+          </div>
+          <div class="wrapper w960p flex-container flex-container-v">
+            <h1 class="xbiggest flex-item-center txtcenter mtxl mbs">
+              <%= info.title %>
+            </h1>
+            <p class="flex-item-center h3-like mts <%= section.description.align %>">
+              <%= info.description %>
+            </p>
+          </div>
+
+          <% } %>
+          <% if (section.name === 'secondCTA' || section.name === 'urgency'){ %>
+
+          <div class="wrapper w960p flex-container flex-container-v">
+            <div class="flex-item-center">
+              <a href="<%= button.action %>" target="_blank"><button class="button-primary txtcenter main-cta_">
+                  <%= button.text %>
+                </button></a>
+            </div>
+
+            <% if (section.name === 'secondCTA') { %>
+
+            <div class="mtxs w150p"></div>
+            <p class="flex-item-center h3-like mts <%= section.description.align %>">
+              <%= info.shortDescription %>
+            </p>
+
+            <% } %>
+
+          </div>
+
+          <% } %>
+          <% } %>
+          <% if (section.subsections){ %>
+          <% Object.entries(section.subsections).forEach(([key, subsection], index) => { %>
+          <% if (section.name === 'proof'){ %>
+
+          <div class="wrapper w960p flex-container flex-container-v">
+            <blockquote>
+              <p class="w700p"><%= subsection.description.text %></p>
+              <p class="w700p">– <b><%= subsection.title %></b></p>
+            </blockquote>
+          </div>
+
+          <% } %>
+          <% if (section.name === 'objections'){ %>
+
+          <div class="wrapper w960p flex-container flex-container-v">
+            <h1 class="flex-item-left h3-like txtleft mts"><%= subsection.title %></h1>
+            <div class="flex-item-center h3-like mts  <%= subsection.description.align %>">
+              <%= subsection.description.text %>
+            </div>
+          </div>
+
+          <% } %>
+          <% if (section.name === 'uniqueness'){ %>
+
+          <div class="wrapper w960p flex-container flex-container-v">
+            <%= subsection.title %>
+            <div class="mtxs"></div>
+            <div class="flex-item-center h3-like mts  <%= subsection.description.align %>">
+              <%= subsection.description.text %>
+            </div>
+          </div>
+
+          <% } %>
+          <% }); %>
+          <% } %>
+          <% let item = Object.values(sections)[index+1]%>
+          <% if (item){ %>
+          <% if (item.menu !== '' && item.menu !== 'Home'){ %>
+
+          <div class="scroll-down">
+            <section class="section07">
+              <a href="#"
+                onclick="$.scrollTo($('.<%=item.name%>-section'), {duration:500})"><span></span><span></span><span></span></a>
+            </section>
+          </div>
+
+          <% } %>
+          <% } %>
+
+        </section>
+
+        <% break; case 'fix' : %>
+
+        <section class="<%= section.name%>-section mtxlp">
+          <div class="wrapper w960p flex-container flex-container-v">
+            <div class="separator w10 is-hidden"></div>
+            <h1 class="xbiggest flex-item-center txtcenter mtxl"><%= section.title %></h1>
+            <div class="flex-item-center h3-like mts  <%= section.description.align %>">
+              <%= section.description.text %>
+            </div>
+          </div>
+
+          <% if (section.subsections){ %>
+          <% Object.entries(section.subsections).forEach(([key, subsection], index) => { %>
+
+          <div class="wrapper w960p flex-container flex-container-v">
+            <h1 class="flex-item-left h3-like txtleft mts"><%= subsection.title %></h1>
+            <div class="flex-item-center h3-like mts  <%= subsection.description.align %>">
+              <%= subsection.description.text %>
+            </div>
+          </div>
+
+          <% }); %>
+          <% } %>
+
+          <div class="scroll-down">
+            <section class="section07">
+              <a href="#"
+                onclick="$.scrollTo($('.firstCTA-section'), {duration:500})"><span></span><span></span><span></span></a>
+            </section>
+          </div>
+        </section>
+
+        <% break; } %>
+        <% } %>
+        <% }); %>
+
+        <!-- FOOTER SECTION -->
+
+        <footer class="footer-section mtxl">
+          <div class="wrapper w960p flex-container flex-container-v txtcenter">
+            <div class="h5-like ptl pbl">
+
+              <% allSections.forEach(([key, item]) => { %>
+
+              <span class="footer-nav-item" data-target="<%= item.name %>-section"><%= item.menu %></span>
+
+              <% }); %>
+
+            </div>
+            <div class="h5-like pbs">
+              <%= settings.copyrights %>
+              <a href="mailto:<%= settings.email %>"><%= settings.email %></a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<%= settings.ga %>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', '<%= settings.ga %>');
+  </script>
+</body>
+
+</html>

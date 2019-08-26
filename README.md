@@ -43,6 +43,6 @@ npm run build
 ### Credits
 
 [webpack-starter](https://github.com/wbkd/webpack-starter) - magically builds for dev and prod.  
-[simplest-startup-starter](https://github.com/bdavidxyz/simplest-startup-starter) - simple jquery template by [David Boureau](https://twitter.com/bdavidxyz)
+[simplest-startup-starter](https://github.com/bdavidxyz/simplest-startup-starter) - simple jquery template by [David Boureau](https://twitter.com/bdavidxyz)  
 [building-the-perfect-sales-page](https://jonathanstark.com/building-the-perfect-sales-page) - step-by-step guide how to build perfect landing by [Jonathan Stark](https://twitter.com/jonathanstark)  
 [understanding-pain-dream-fix](https://www.antonsten.com/understanding-pain-dream-fix) - pain, dream, fix approach by [Anton Sten](https://twitter.com/antonsten)

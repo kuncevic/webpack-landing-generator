@@ -7,6 +7,7 @@
 
 ```
 git clone https://github.com/kuncevic/webpack-landing-generator
+cd webpack-landing-generator
 npm install
 npm install -g nodemon
 

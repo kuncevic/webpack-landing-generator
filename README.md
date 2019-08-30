@@ -13,7 +13,7 @@ npm install -g nodemon
 
 ```
 
-### 🚀 Start Dev Server
+### 🚀 Start dev server
 
 ```
 npm start
@@ -25,7 +25,7 @@ npm start
 http://localhost:8080
 ```
 
-### ✅ Build Prod Version
+### ✅ Build prod version and deploy
 
 ```
 npm run build

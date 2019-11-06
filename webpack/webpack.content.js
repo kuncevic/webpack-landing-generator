@@ -1,4 +1,5 @@
-const data = require('../src/content/' + process.env.CONTENT + '.json');
+const content = process.env.CONTENT;
+const data = require('../src/content/' + content + '.json');
 
 const Webpack = require('webpack');
 

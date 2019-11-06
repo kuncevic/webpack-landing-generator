@@ -1,3 +1,4 @@
+const content = process.env.CONTENT;
 const Path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -10,7 +11,7 @@ module.exports = {
     app: Path.resolve(__dirname, '../src/scripts/index.js')
   },
   output: {
-    path: Path.join(__dirname, '../build'),
+    path: Path.join(__dirname, `../build/${content}`),
     filename: 'js/[name].js'
   },
   optimization: {

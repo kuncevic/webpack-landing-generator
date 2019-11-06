@@ -89,7 +89,7 @@
       "menu": "About",
       "title": "Created with ❤️ by Aliaksei Kuncevič",
       "description": {
-        "text": "👋 <a target='_blank' href='https://github.com/kuncevic'>Github</a> <br /> <a target='_blank' href='https://www.twitter.com/kuncevic'>Twitter</a> <br /> <a target='_blank' href='https://www.linkedin.com/kuncevic/'>Linkedin</a>",
+        "text": "👋 <a target='_blank' href='https://github.com/kuncevic'>Github</a> <br /> <a target='_blank' href='https://www.twitter.com/kuncevic'>Twitter</a> <br /> <a target='_blank' href='https://www.linkedin.com/in/kuncevic'>Linkedin</a>",
         "align": "txtcenter"
       },
       "button": "cta"

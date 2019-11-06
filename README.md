@@ -34,8 +34,8 @@ npm run build
 ### 📦 Switch content by changing params in package.json
 
 ```
-"start": "npm run start:dev -- content.demo",
-"build": "npm run build:prod -- content.demo"
+"start": "npm run start:dev -- demo",
+"build": "npm run build:prod -- demo"
 ```
 
 ### 💊 Features

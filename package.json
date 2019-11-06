@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Easy way to create landing page that converts.",
   "scripts": {
-    "start": "npm run start:dev -- content.demo",
-    "build": "npm run build:prod -- content.demo",
+    "start": "npm run start:dev -- demo",
+    "build": "npm run build:prod -- demo",
     "start:dev": "func() { CONTENT=$1 nodemon --watch content/ --exec 'webpack-dev-server --config webpack/webpack.config.dev.js'; }; func",
     "build:prod": "func() { CONTENT=$1 NODE_ENV=production webpack --config webpack/webpack.config.prod.js  --colors; }; func"
   },
